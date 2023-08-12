@@ -1,0 +1,1066 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	 <link rel="stylesheet" type="text/css" href="{% static 'mysite/Scripts and Style/result.css' %}">
+	<title>Result</title>
+</head>
+<body>
+	<form method="post">
+	  <div id="trenddata">
+
+	   <div class="aligment">
+	   	<div id="li1"></div>
+	  	<div id="li2"></div>
+       <div class="centdata">
+        <div class="boxdata">
+        {% if keytosrc|length == 1 %}
+         <div class="outtopic0">
+        	<div class="topic0">
+        		<div class="clrind0"></div>
+        		<h4>{{keytosrc.0}}</h4>
+        	</div>
+         </div>
+         {% endif %}
+        {% if keytosrc|length == 2 %}
+         <div class="outtopic">
+        	<div class="topic1">
+        		<div class="clrind"></div>
+        		<h4>{{keytosrc.0}}</h4>
+        	</div>
+        	<div class="topic2">
+        		<div class="clrind1"></div>
+        		<h4>{{keytosrc.1}}</h4>
+        	</div>
+         </div>
+         {% endif %}
+         {% if keytosrc|length == 3 %}
+         <div class="outtopic2">
+        	<div class="topic2for3">
+        		<div class="clrind2for3"></div>
+        		<h4>{{keytosrc.0}}</h4>
+        	</div>
+        	<div class="topic3">
+        		<div class="clrind3"></div>
+        		<h4>{{keytosrc.1}}</h4>
+        	</div>
+        	<div class="topic4">
+        		<div class="clrind4"></div>
+        		<h4>{{keytosrc.2}}</h4>
+        	</div>
+         </div>
+         {% endif %}
+         {% if keytosrc|length == 4 %}
+         <div class="outtopic3">
+        	<div class="topic3for3">
+        		<div class="clrind3for3"></div>
+        		<h4>{{keytosrc.0}}</h4>
+        	</div>
+        	<div class="topic5">
+        		<div class="clrind5"></div>
+        		<h4>{{keytosrc.1}}</h4>
+        	</div>
+        	<div class="topic6">
+        		<div class="clrind6"></div>
+        		<h4>{{keytosrc.2}}</h4>
+        	</div>
+        	<div class="topic7">
+        		<div class="clrind7"></div>
+        		<h4>{{keytosrc.3}}</h4>
+        	</div>
+         </div>
+         {% endif %}
+         {% if keytosrc|length == 5 %}
+         <div class="outtopic4">
+        	<div class="topic4for3">
+        		<div class="clrind4for3"></div>
+        		<h4>{{keytosrc.0}}</h4>
+        	</div>
+        	<div class="topic8">
+        		<div class="clrind8"></div>
+        		<h4>{{keytosrc.1}}</h4>
+        	</div>
+        	<div class="topic9">
+        		<div class="clrind9"></div>
+        		<h4>{{keytosrc.2}}</h4>
+        	</div>
+        	<div class="topic10">
+        		<div class="clrind10"></div>
+        		<h4>{{keytosrc.3}}</h4>
+        	</div>
+        	<div class="topic11">
+        		<div class="clrind11"></div>
+        		<h4>{{keytosrc.4}}</h4>
+        	</div>
+         </div>
+         {% endif %}
+        </div>
+       </div>
+       </div>
+    </div>
+
+    <div id="trenddata2">
+       <div class="centdata2">
+       	<div id="c1"></div>
+        <div id="c2"></div>
+        <div class="boxdata2">
+         <div class="datacon2">
+          <div class="topcont2">
+           <h4>Interest over time</h4>
+
+           <hr>
+         </div>
+         <div class="chartsiz">
+           <div id="chartContainer">
+           </div>  	
+         </div>
+        </div>
+      </div>
+     </div>
+    </div>
+    {% if keytosrc|length == 1 %}
+    <div class="dataorg">
+    <div id="relatedtrd">
+    	<div id="c3"></div>
+        <div id="c4"></div>
+    	<div class="relmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.0}} Related Topics</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_topic.0}}</td></tr>
+    				<tr><td class="maincont">{{related_topic.1}}</td></tr>
+    				<tr><td class="maincont">{{related_topic.2}}</td></tr>
+    				<tr><td class="maincont">{{related_topic.3}}</td></tr>
+    				<tr><td class="maincont">{{related_topic.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.0}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    </div>
+    {% endif %}
+    {% if keytosrc|length == 2 %}
+    <div class="dataorg">
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.0}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries0.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.1}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries1.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    </div>
+    {% endif %}
+    {% if keytosrc|length == 3 %}
+    <div class="dataorg">
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.0}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries0.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.1}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries1.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+	</div>
+    </div>
+    <div class="data3">
+    <div id="relatedqry">
+    	<div id="c7"></div>
+        <div id="c8"></div>
+    	<div class="relqmaindata3">
+    		<div class="topcont">
+    			<h4>{{keytosrc.2}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries2.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    </div>
+    {% endif %}
+    {% if keytosrc|length == 4 %}
+    <div class="dataorg">
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.0}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries0.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.1}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries1.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    </div>
+    <div class="dataorg">
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.2}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries2.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.3}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries3.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries3.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries3.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries3.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries3.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    </div>
+    {% endif %}
+    {% if keytosrc|length == 5 %}
+    <div class="dataorg">
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.0}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries0.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries0.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.1}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries1.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries1.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    </div>
+    <div class="dataorg">
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.2}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries2.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries2.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    <div id="relatedqry">
+    	<div id="c5"></div>
+        <div id="c6"></div>
+    	<div class="relqmaindata">
+    		<div class="topcont">
+    			<h4>{{keytosrc.3}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries3.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries3.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries3.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries3.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries3.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    </div>
+    <div class="data3">
+    <div id="relatedqry">
+    	<div id="c7"></div>
+        <div id="c8"></div>
+    	<div class="relqmaindata3">
+    		<div class="topcont">
+    			<h4>{{keytosrc.4}} Related Queries</h4>
+    			<hr>
+    		</div>
+    		<div class="tablevw">
+    			<table style="width:100%">
+    				<tr>
+    					<th></th>
+    				</tr>
+    				<tr><td class="maincont">{{related_queries4.0}}</td></tr>
+    				<tr><td class="maincont">{{related_queries4.1}}</td></tr>
+    				<tr><td class="maincont">{{related_queries4.2}}</td></tr>
+    				<tr><td class="maincont">{{related_queries4.3}}</td></tr>
+    				<tr><td class="maincont">{{related_queries4.4}}</td></tr>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+    </div>
+    {% endif %}
+    <div class="chartdis">
+    <div></div>
+    </div>
+	</form>
+
+{% if keytosrc|length == 1 %}               
+    <script type="text/javascript">
+var i;
+const dis3 = {{testdata|safe}};
+var name1 = "{{keytosrc.0}}";
+var dis2;
+var dps1 = [];
+for(i = 0; i < dis3.length; i++) {
+	    dis2 = dis3[i];
+        dps1.push({x:new Date(dis2.my_timestamp), y: dis2.data});
+}
+console.log(dps1);
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	backgroundColor: "transparent",
+	labelFontColor: '#f5f6fa',
+	title:{
+		text: ""
+	},
+	axisX: {
+		valueFormatString: "DD MMM,YYYY",
+		lineColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+		crosshair:{
+			enabled : true ,
+			lineDashType : "solid",
+			color : "rgba(255,255,255,0.1)",
+			thickness: 3,
+			labelBackgroundColor: "rgba(255,255,255,0.1)",
+			labelFontColor: "#f5f6fa",
+			labelFontFamily: "'Roboto', sans-serif",
+			labelFontSize: 14,
+			labelMaxWidth: 70,
+		}        
+	},
+	axisY: {
+		lineColor: "#f5f6fa",
+		maximum: 100,
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+	},
+	legend:{
+		cursor: "pointer",
+		fontSize: 16,
+		fontColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		itemclick: toggleDataSeries
+	},
+	toolTip:{
+		shared: true,
+		 borderColor: "#fff"
+	},
+	data: 
+	[{
+		name: name1,
+		type: "line",
+		markerSize: 0,
+		color: "#2196f3",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps1
+            
+	}]
+	});
+chart.render();
+
+function toggleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
+    </script>
+{% endif %}     
+{% if keytosrc|length == 2 %}               
+    <script type="text/javascript">
+var i;
+const dis3 = {{testdata|safe}};
+const dis4 = {{testdata1|safe}};
+var name1 = "{{keytosrc.0}}";
+var name2 = "{{keytosrc.1}}";
+var dis2;
+var dis2o2;
+var dps1 = [];
+var dps2 = [];
+for(i = 0; i < dis3.length; i++) {
+	    dis2 = dis3[i];
+	    dis2o2 = dis4[i]
+        dps1.push({x:new Date(dis2.my_timestamp), y: dis2.data});
+        dps2.push({x:new Date(dis2o2.my_timestamp), y: dis2o2.data});
+}
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	backgroundColor: "transparent",
+	labelFontColor: '#f5f6fa',
+	title:{
+		text: ""
+	},
+	axisX: {
+		valueFormatString: "DD MMM,YYYY",
+		lineColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+		crosshair:{
+			enabled : true ,
+			lineDashType : "solid",
+			color : "rgba(255,255,255,0.1)",
+			thickness: 3,
+			labelBackgroundColor: "rgba(255,255,255,0.1)",
+			labelFontColor: "#f5f6fa",
+			labelFontFamily: "'Roboto', sans-serif",
+			labelFontSize: 14,
+			labelMaxWidth: 70,
+		}        
+	},
+	axisY: {
+		lineColor: "#f5f6fa",
+		maximum: 100,
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+	},
+	legend:{
+		cursor: "pointer",
+		fontSize: 16,
+		fontColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		itemclick: toggleDataSeries
+	},
+	toolTip:{
+		shared: true,
+		 borderColor: "#fff"
+	},
+	data: 
+	[{
+		name: name1,
+		type: "line",
+		markerSize: 0,
+		color: "#2196f3",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps1
+	},
+	{
+		name: name2,
+		type: "line",
+		markerSize: 0,
+		color: "#f44336",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps2
+	}]
+	});
+chart.render();
+
+function toggleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
+    </script>
+{% endif %}
+{% if keytosrc|length == 3 %}               
+    <script type="text/javascript">
+var i;
+const dis3 = {{testdata|safe}};
+const dis4 = {{testdata1|safe}};
+const dis5 = {{testdata2|safe}};
+var name1 = "{{keytosrc.0}}";
+var name2 = "{{keytosrc.1}}";
+var name3 = "{{keytosrc.2}}";
+var dis2;
+var dis2o2;
+var dis3o2;
+var dps1 = [];
+var dps2 = [];
+var dps3 = [];
+for(i = 0; i < dis3.length; i++) {
+	    dis2 = dis3[i];
+	    dis2o2 = dis4[i];
+	    dis3o2 = dis5[i];
+        dps1.push({x:new Date(dis2.my_timestamp), y: dis2.data});
+        dps2.push({x:new Date(dis2o2.my_timestamp), y: dis2o2.data});
+        dps3.push({x:new Date(dis3o2.my_timestamp), y: dis3o2.data});
+}
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	backgroundColor: "transparent",
+	labelFontColor: '#f5f6fa',
+	title:{
+		text: ""
+	},
+	axisX: {
+		valueFormatString: "DD MMM,YYYY",
+		lineColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+		crosshair:{
+			enabled : true ,
+			lineDashType : "solid",
+			color : "rgba(255,255,255,0.1)",
+			thickness: 3,
+			labelBackgroundColor: "rgba(255,255,255,0.1)",
+			labelFontColor: "#f5f6fa",
+			labelFontFamily: "'Roboto', sans-serif",
+			labelFontSize: 14,
+			labelMaxWidth: 70,
+		}        
+	},
+	axisY: {
+		lineColor: "#f5f6fa",
+		maximum: 100,
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+	},
+	legend:{
+		cursor: "pointer",
+		fontSize: 16,
+		fontColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		itemclick: toggleDataSeries
+	},
+	toolTip:{
+		shared: true,
+		 borderColor: "#fff"
+	},
+	data: 
+	[{
+		name: name1,
+		type: "line",
+		markerSize: 0,
+		color: "#2196f3",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps1
+            
+	},
+	{
+		name: name2,
+		type: "line",
+		markerSize: 0,
+		color: "#f44336",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps2
+	},
+	{
+		name: name3,
+		type: "line",
+		markerSize: 0,
+		color: "#ffca28",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps3
+	}]
+	});
+chart.render();
+
+function toggleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
+    </script>
+{% endif %}
+{% if keytosrc|length == 4 %}               
+    <script type="text/javascript">
+var i;
+const dis3 = {{testdata|safe}};
+const dis4 = {{testdata1|safe}};
+const dis5 = {{testdata2|safe}};
+const dis6 = {{testdata3|safe}};
+var name1 = "{{keytosrc.0}}";
+var name2 = "{{keytosrc.1}}";
+var name3 = "{{keytosrc.2}}";
+var name4 = "{{keytosrc.3}}";
+var dis2;
+var dis2o2;
+var dis3o2;
+var dis4o2;
+var dps1 = [];
+var dps2 = [];
+var dps3 = [];
+var dps4 = [];
+for(i = 0; i < dis3.length; i++) {
+	    dis2 = dis3[i];
+	    dis2o2 = dis4[i];
+	    dis3o2 = dis5[i];
+	    dis4o2 = dis6[i];
+        dps1.push({x:new Date(dis2.my_timestamp), y: dis2.data});
+        dps2.push({x:new Date(dis2o2.my_timestamp), y: dis2o2.data});
+        dps3.push({x:new Date(dis3o2.my_timestamp), y: dis3o2.data});
+        dps4.push({x:new Date(dis4o2.my_timestamp), y: dis4o2.data});
+}
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	backgroundColor: "transparent",
+	labelFontColor: '#f5f6fa',
+	title:{
+		text: ""
+	},
+	axisX: {
+		valueFormatString: "DD MMM,YYYY",
+		lineColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+		crosshair:{
+			enabled : true ,
+			lineDashType : "solid",
+			color : "rgba(255,255,255,0.1)",
+			thickness: 3,
+			labelBackgroundColor: "rgba(255,255,255,0.1)",
+			labelFontColor: "#f5f6fa",
+			labelFontFamily: "'Roboto', sans-serif",
+			labelFontSize: 14,
+			labelMaxWidth: 70,
+		}        
+	},
+	axisY: {
+		lineColor: "#f5f6fa",
+		maximum: 100,
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+	},
+	legend:{
+		cursor: "pointer",
+		fontSize: 16,
+		fontColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		itemclick: toggleDataSeries
+	},
+	toolTip:{
+		shared: true,
+		 borderColor: "#fff"
+	},
+	data: 
+	[{
+		name: name1,
+		type: "line",
+		markerSize: 0,
+		color: "#2196f3",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps1
+            
+	},
+	{
+		name: name2,
+		type: "line",
+		markerSize: 0,
+		color: "#f44336",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps2
+	},
+	{
+		name: name3,
+		type: "line",
+		markerSize: 0,
+		color: "#ffca28",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps3
+	},
+	{
+		name: name4,
+		type: "line",
+		markerSize: 0,
+		color: "#43a047",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps4
+	}]
+	});
+chart.render();
+
+function toggleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
+    </script>
+{% endif %} 
+{% if keytosrc|length == 5 %}               
+    <script type="text/javascript">
+var i;
+const dis3 = {{testdata|safe}};
+const dis4 = {{testdata1|safe}};
+const dis5 = {{testdata2|safe}};
+const dis6 = {{testdata3|safe}};
+const dis7 = {{testdata4|safe}};
+var name1 = "{{keytosrc.0}}";
+var name2 = "{{keytosrc.1}}";
+var name3 = "{{keytosrc.2}}";
+var name4 = "{{keytosrc.3}}";
+var name5 = "{{keytosrc.4}}";
+var dis2;
+var dis2o2;
+var dis3o2;
+var dis4o2;
+var dis5o2;
+var dps1 = [];
+var dps2 = [];
+var dps3 = [];
+var dps4 = [];
+var dps5 = [];
+for(i = 0; i < dis3.length; i++) {
+	    dis2 = dis3[i];
+	    dis2o2 = dis4[i];
+	    dis3o2 = dis5[i];
+	    dis4o2 = dis6[i];
+	    dis5o2 = dis7[i];
+        dps1.push({x:new Date(dis2.my_timestamp), y: dis2.data});
+        dps2.push({x:new Date(dis2o2.my_timestamp), y: dis2o2.data});
+        dps3.push({x:new Date(dis3o2.my_timestamp), y: dis3o2.data});
+        dps4.push({x:new Date(dis4o2.my_timestamp), y: dis4o2.data});
+        dps5.push({x:new Date(dis5o2.my_timestamp), y: dis5o2.data});
+}
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	backgroundColor: "transparent",
+	labelFontColor: '#f5f6fa',
+	title:{
+		text: ""
+	},
+	axisX: {
+		valueFormatString: "DD MMM,YYYY",
+		lineColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+		crosshair:{
+			enabled : true ,
+			lineDashType : "solid",
+			color : "rgba(255,255,255,0.1)",
+			thickness: 3,
+			labelBackgroundColor: "rgba(255,255,255,0.1)",
+			labelFontColor: "#f5f6fa",
+			labelFontFamily: "'Roboto', sans-serif",
+			labelFontSize: 14,
+			labelMaxWidth: 70,
+		}        
+	},
+	axisY: {
+		lineColor: "#f5f6fa",
+		maximum: 100,
+		fontFamily: "'Roboto', sans-serif",
+		labelFontColor: "#f5f6fa",
+	},
+	legend:{
+		cursor: "pointer",
+		fontSize: 16,
+		fontColor: "#f5f6fa",
+		fontFamily: "'Roboto', sans-serif",
+		itemclick: toggleDataSeries
+	},
+	toolTip:{
+		shared: true,
+		 borderColor: "#fff"
+	},
+	data: 
+	[{
+		name: name1,
+		type: "line",
+		markerSize: 0,
+		color: "#2196f3",
+		legendMarkerColor: "#2196f3",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps1
+            
+	},
+	{
+		name: name2,
+		type: "line",
+		markerSize: 0,
+		color: "#f44336",
+		legendMarkerColor: "#f44336",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps2
+	},
+	{
+		name: name3,
+		type: "line",
+		markerSize: 0,
+		color: "#ffca28",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps3
+	},
+	{
+		name: name4,
+		type: "line",
+		markerSize: 0,
+		color: "#43a047",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps4
+	},
+	{
+		name: name5,
+		type: "line",
+		markerSize: 0,
+		color: "#9c27b0",
+        showInLegend: true,
+		showInLegend: true,
+		dataPoints: dps5
+	}]
+	});
+chart.render();
+
+function toggleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
+    </script>
+{% endif %}              
+	<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+	<script id="poptiming" type="application/json">{{poptime}}</script>
+    <script id="popserch" type="application/json">{{popdata}}</script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

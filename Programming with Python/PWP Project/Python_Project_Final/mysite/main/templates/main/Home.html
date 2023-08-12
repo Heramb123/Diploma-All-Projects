@@ -1,0 +1,353 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/07d169de7e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'mysite/Scripts and Style/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Trendz</title>
+</head>
+<body>
+	<form method="post" autocomplete="off">
+		<div class="srchbtn">
+                {% csrf_token %}
+               <input type="text" name="searchbox" placeholder="Search Here...">
+               <a href="/result" target="_blank" name="buttonswt"><button for="check"><i class="fas fa-search"></i></button></a>
+        </div>
+    <div class="spacebtwn"></div>
+     <div class="container">
+      <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input
+              type="radio"
+              class="radio"
+              id="Afghanistan"
+              name="Country"
+            />
+            <label for="Afghanistan">Afghanistan</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Australia" name="Country" value="Australia" />
+            <label for="Australia">Australia</label>
+          </div>
+
+          <!--<div class="option">
+            <input type="radio" class="radio" id="Bangladesh" name="Country" value="Bangladesh" />
+            <label for="Bangladesh">Bangladesh</label>
+          </div>-->
+
+          <div class="option">
+            <input type="radio" class="radio" id="Belgium" name="Country" value="Belgium" />
+            <label for="Belgium">Belgium</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Brazil" name="Country" value="Brazil" />
+            <label for="Brazil">Brazil</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Canada" name="Country" value="Canada" />
+            <label for="Canada">Canada</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="China" name="Country" value="China" />
+            <label for="China">China</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Denmark" name="Country" value="Denmark" />
+            <label for="Denmark">Denmark</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Egypt" name="Country" value="Egypt" />
+            <label for="Egypt">Egypt</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Ethiopia" name="Country" value="Ethiopia" />
+            <label for="Ethiopia">Ethiopia</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Finland" name="Country" value="Finland" />
+            <label for="Finland">Finland</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="France" name="Country" value="France" />
+            <label for="France">France</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Germany" name="Country" value="Germany" />
+            <label for="Germany">Germany</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Hong" name="Country" value="Hong" />
+            <label for="Hong">Hong</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Hungary" name="Country"/>
+            <label for="Hungary">Hungary</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="India" name="Country"/>
+             <label for="India">India</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Israel" name="Country" value="Israel" />
+            <label for="Israel">Israel</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Italy" name="Country" value="Italy" />
+            <label for="Italy">Italy</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Japan" name="Country" value="Japan" />
+            <label for="Japan">Japan</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Kenya" name="Country" value="Kenya" />
+            <label for="Kenya">Kenya</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Kuwait" name="Country" value="Kuwait" />
+            <label for="Kuwait">Kuwait</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Kyrgyzstan" name="Country" value="Kyrgyzstan" />
+            <label for="Kyrgyzstan">Kyrgyzstan</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Libya" name="Country" value="Libya" />
+            <label for="Libya">Libya</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Madagascar" name="Country" value="Madagascar" />
+            <label for="Madagascar">Madagascar</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Malaysia" name="Country" value="Malaysia" />
+            <label for="Malaysia">Malaysia</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Mexico" name="Country" value="Mexico" />
+            <label for="Mexico">Mexico</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Myanmar" name="Country" value="Myanmar" />
+            <label for="Myanmar">Myanmar</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Nepal" name="Country" value="Nepal" />
+            <label for="Nepal">Nepal</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="New Zealand" name="Country" value="New Zealand" />
+            <label for="New Zealand">New Zealand</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="North Korea" name="Country" value="North Korea" />
+            <label for="North Korea">North Korea</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Norway" name="Country" value="Norway" />
+            <label for="Norway">Norway</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Oman" name="Country" value="Oman" />
+            <label for="Oman">Oman</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Pakistan" name="Country" value="Pakistan" />
+            <label for="Pakistan">Pakistan</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Poland" name="Country" value="Poland" />
+            <label for="Poland">Poland</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Portugal" name="Country" value="Portugal" />
+            <label for="Portugal">Portugal</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Qatar" name="Country" value="Qatar" />
+            <label for="Qatar">Qatar</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Russia" name="Country" value="Russia" />
+            <label for="Russia">Russia</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Saudi Arabia" name="Country" value="Saudi Arabia" />
+            <label for="Saudi Arabia">Saudi Arabia</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Singapore" name="Country" value="Singapore" />
+            <label for="Singapore">Singapore</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="South Africa" name="Country" value="South Africa" />
+            <label for="South Africa">South Africa</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="South Korea" name="Country" value="South Korea" />
+            <label for="South Korea">South Korea</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Switzerland" name="Country" value="Switzerland" />
+            <label for="Switzerland">Switzerland</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Thailand" name="Country" value="Thailand" />
+            <label for="Thailand">Thailand</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Turkey" name="Country" value="Turkey" />
+            <label for="Turkey">Turkey</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="United Arab Emirates" name="Country" value="United Arab Emirates" />
+            <label for="United Arab Emirates">United Arab Emirates</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="United Kingdom" name="Country" value="United Kingdom" />
+            <label for="United Kingdom">United Kingdom</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="United States" name="Country" value="United States" />
+            <label for="United States">United States</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Vietnam" name="Country" value="Vietnam" />
+            <label for="Vietnam">Vietnam</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Yemen" name="Country" value="Yemen" />
+            <label for="Yemen">Yemen</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Zimbabwe" name="Country" value="Zimbabwe" />
+            <label for="Zimbabwe">Zimbabwe</label>
+          </div>
+        </div>
+
+        <div class="selected" name="selecountry" id="countrysel">United States</div>
+      </div>
+    </div>
+
+    <div id="trenddata">
+      <div id="c1"></div>
+      <div id="c2"></div>
+      <div class="centdata">
+      <div class="boxdata">
+       <div class="datacon">
+        <div class="topcont">
+         <h4>Trending Topics<img src="{% static 'mysite/images/arrow.svg' %}"></h4>
+
+         <hr>
+         </div>
+         <div class="tablevw">
+         <table style="width:100%">
+         <tr>
+             <th></th>
+             <th></th>
+         </tr>
+         <tr>
+         <td class="maincont">{{trendtop.0}}</td>
+         <td class="maincont">{{trendtop.5}}</td>
+         </tr>
+         <tr>
+         <td class="maincont">{{trendtop.1}}</td>
+         <td class="maincont">{{trendtop.6}}</td>
+         </tr>
+         <tr>
+         <td class="maincont">{{trendtop.2}}</td>
+         <td class="maincont">{{trendtop.7}}</td>
+         </tr>
+         <tr>
+         <td class="maincont">{{trendtop.3}}</td>
+         <td class="maincont">{{trendtop.8}}</td>
+         </tr>
+         <tr>
+         <td class="maincont">{{trendtop.4}}</td>
+         <td class="maincont">{{trendtop.9}}</td>
+         </tr>
+         </table>
+        </div>
+        </div>
+      </div>
+    </div>
+      </div>
+	</form>
+  <div class="end"></div>
+	<script src="{% static 'mysite/Scripts and Style/main.js' %}"></script>
+  <script>
+    const selectedcon = document.querySelector(".selected");
+    const optionsListcon = document.querySelectorAll(".option");
+    optionsListcon.forEach(o => {
+    o.addEventListener("click", () => {
+    $.ajax({
+        type: "GET",
+        url: '/home',
+        data: {
+            "country_name": selected.innerHTML = o.querySelector("label").innerHTML,
+        },
+        dataType: "json",
+        success: function (data) {
+            alert("successfull")
+        },
+        failure: function () {
+            alert("failure");
+        }
+    });
+  });
+});
+  </script>
+</body>
+</html>
