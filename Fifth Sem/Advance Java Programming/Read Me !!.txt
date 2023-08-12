@@ -1,0 +1,44 @@
+
+
+	Course:	Co-5I
+	Roll No:11-20
+	Topic: Hospital Management System
+	
+
+	Java Version: 1.8 <needed>
+
+
+	Pre-requisite : rx2ml File (Table Presentation)
+
+	1.Open Pre-requisite Softwares Folder 
+	2.Follow the specified path : Prerequisite Softwares\rs2xml\rs2xml
+	3.Copy the rx2ml.jar file 
+	4.Paste the following file at the location Specified below:
+		a.C:\Program Files\Java\jdk1.8.0_231\jre\lib\ext
+		b.C:\Program Files\Java\jre1.8.0_231\lib\ext
+
+
+	Pre-requisite : UCanAccess File (Database)
+
+	1.Open Pre-requisite Softwares Folder 
+	2.copy ucanaccess-5.0.0.jar file to the locations specified in step5.
+	3.Follow the specified path : Prerequisite Softwares\UCanAccess-5.0.0-bin\UCanAccess-5.0.0-bin\lib
+	4.Copy all .jar  files present in the folder. 
+	5.Paste the files at the location Specified below:
+		a.C:\Program Files\Java\jdk1.8.0_231\jre\lib\ext
+		b.C:\Program Files\Java\jre1.8.0_231\lib\ext
+
+
+	Pre-requisite : ojdbc8 (Database)
+
+	1.Open Pre-requisite Softwares Folder 
+	2.Copy ojdbc8.jar file.  
+	4.Paste the file at the location Specified below:
+		a.C:\Program Files\Java\jdk1.8.0_231\jre\lib\ext
+		b.C:\Program Files\Java\jre1.8.0_231\lib\ext
+
+
+
+	Note: Main Program Execution Starts From Login Module.Pls Refer Login.java
+	      UserName=admin
+	      Password=admin
